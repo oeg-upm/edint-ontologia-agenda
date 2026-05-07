@@ -1,0 +1,626 @@
+@prefix : <http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#> .
+
+<http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda> rdf:type owl:Ontology ;
+                                                                    owl:versionIRI <http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda/0.1.0> ;
+                                                                    <http://purl.org/dc/elements/1.1/creator> "Daniel Doña" ,
+                                                                                                              "Edna Ruckhaus" ,
+                                                                                                              "Lucía Sánchez" ,
+                                                                                                              "Oscar Corcho" ,
+                                                                                                              "Socorro Bernardos" ;
+                                                                    <http://purl.org/dc/terms/description> "The Agenda ontology represents the agenda of cultural, sporting and social events that take place in the municipality."@es ;
+                                                                    <http://purl.org/dc/terms/title> <https://creativecommons.org/licenses/by/4.0> ,
+                                                                                                     "Vocabulario para la representación de la agenda cultural, deportiva y social de un municipio"@es ,
+                                                                                                     "Vocabulary for the representation of the cultural, sporting and social agenda of a municipality"@en ;
+                                                                    <http://purl.org/vocab/vann/preferredNamespacePrefix> "esagenda" ;
+                                                                    <http://purl.org/vocab/vann/preferredNamespaceUri> "http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#" ;
+                                                                    rdfs:comment "http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#attendanceMode
+:attendanceMode rdf:type owl:ObjectProperty ;
+                rdfs:domain :CityEvent ;
+                rdfs:range [ rdf:type owl:Restriction ;
+                             owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                             owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/edint/AttendanceMode>
+                           ] ;
+                rdfs:comment "Attendance mode, for example, in person, online."@en ,
+                             "Modalidad de asistencia, por ejemplo, presencial, en línea."@es ;
+                rdfs:label "attendance mode"@en ,
+                           "modalidad de asistencia"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#documentation
+:documentation rdf:type owl:ObjectProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain :CityEvent ;
+               rdfs:range <https://schema.org/DigitalDocument> ;
+               rdfs:comment "Documentación asociada a un evento"@es ,
+                            "Documentation associated with an event"@en ;
+               rdfs:label "documentacion"@es ,
+                          "documentation"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#eventStatus
+:eventStatus rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain :CityEvent ;
+             rdfs:range [ rdf:type owl:Restriction ;
+                          owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                          owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/edint/EventStatus>
+                        ] ;
+             rdfs:comment "Estado de un evento, por ejemplo, activo o cancelado."@es ,
+                          "Status of an event, for example, active or cancelled."@en ;
+             rdfs:label "estado del evento"@es ,
+                        "event status"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#eventType
+:eventType rdf:type owl:ObjectProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain :CityEvent ;
+           rdfs:range [ rdf:type owl:Restriction ;
+                        owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                        owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/edint/EventType>
+                      ] ;
+           rdfs:comment "Tipo de evento que tendrá lugar."@es ,
+                        "Type of event to be held."@en ;
+           rdfs:label "tipo de evento"@es ,
+                      "type of event"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#organizedBy
+:organizedBy rdf:type owl:ObjectProperty ;
+             rdfs:domain :CityEvent ;
+             rdfs:range <http://schema.org/Organization> ;
+             rdfs:comment "Relación entre el evento y la organización que lo gestiona."@es ,
+                          "Relationship between the event and the organization that manages it."@en ;
+             rdfs:label "organizadoPor"@es ,
+                        "organizedBy"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#takesPlace
+:takesPlace rdf:type owl:ObjectProperty ;
+            rdfs:domain :CityEvent ;
+            rdfs:range <http://vocab.linkeddata.es/datosabiertos/def/urbanismos-infraestructuras/infraestructura#Facility> ;
+            rdfs:comment "El lugar en donde se realiza el evento."@es ,
+                         "The venue where the event takes place."@es ;
+            rdfs:label "takes place"@en ,
+                       "tiene lugar"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#workPerformed
+:workPerformed rdf:type owl:ObjectProperty ;
+               rdfs:domain <https://schema.org/Event> ;
+               rdfs:range <https://schema.org/CreativeWork> ;
+               rdfs:comment "A work performed in some event, for example a play performed in a theater event."@en ,
+                            "Una obra representada en algún evento, por ejemplo, una obra de teatro representada en un evento teatral."@es ;
+               rdfs:label "obra presentada"@es ,
+                          "work performed"@en .
+
+
+###  http://www.opengis.net/ont/geosparql#hasGeometry
+<http://www.opengis.net/ont/geosparql#hasGeometry> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <http://www.opengis.net/ont/geosparql#Feature> ;
+                                                   rdfs:range <http://www.opengis.net/ont/geosparql#Geometry> ;
+                                                   <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" ;
+                                                   <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" ;
+                                                   <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^xsd:date ;
+                                                   <http://purl.org/dc/elements/1.1/description> """
+      A spatial representation for a given feature.
+    """@en ;
+                                                   rdfs:comment """
+      A spatial representation for a given feature.
+    """@en ;
+                                                   rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ,
+                                                                    <http://www.opengis.net/spec/geosparql/1.0> ;
+                                                   rdfs:label "hasGeometry"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> """
+      A spatial representation for a given feature.
+    """@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "hasGeometry"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:ObjectProperty ;
+                                               rdfs:range <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                               rdfs:comment "A concept may be a member of more than one concept scheme."@en ;
+                                               rdfs:label "is in scheme"@en .
+
+
+###  https://schema.org/address
+<https://schema.org/address> rdf:type owl:ObjectProperty ,
+                                      owl:FunctionalProperty ;
+                             rdfs:domain :CityEvent ;
+                             rdfs:range <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> ;
+                             rdfs:comment "Dirección física del artículo."@es ,
+                                          "Physical address of the item."@en ;
+                             rdfs:label "address"@en ,
+                                        "dirección"@es .
+
+
+###  https://schema.org/subEvent
+<https://schema.org/subEvent> rdf:type owl:ObjectProperty ,
+                                       owl:FunctionalProperty ;
+                              rdfs:domain <https://schema.org/Event> ;
+                              rdfs:range <https://schema.org/Event> ;
+                              rdfs:comment "An Event that is part of this event."@en ,
+                                           "Un evento que forma parte de este evento."@es ;
+                              rdfs:label "sub event"@en ,
+                                         "sub evento"@es .
+
+
+###  https://schema.org/superEvent
+<https://schema.org/superEvent> rdf:type owl:ObjectProperty ,
+                                         owl:FunctionalProperty ;
+                                rdfs:domain <https://schema.org/Event> ;
+                                rdfs:range <https://schema.org/Event> ;
+                                rdfs:comment "An event that this event is a part of."@en ,
+                                             "Un acontecimiento del que forma parte este evento."@es ;
+                                rdfs:label "super event"@en ,
+                                           "super evento"@es .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type owl:DatatypeProperty ;
+                                      rdfs:range xsd:string .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#interior
+:interior rdf:type owl:DatatypeProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain :CityEvent ;
+          rdfs:range xsd:boolean ;
+          rdfs:comment "Indica si un evento tiene lugar en un sitio cerrado."@es ,
+                       "Indicates whether an event is taking place in an enclosed location"@en ;
+          rdfs:label "inside"@en ,
+                     "interior"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#price
+:price rdf:type owl:DatatypeProperty ;
+       rdfs:domain :CityEvent ;
+       rdfs:range xsd:string ;
+       rdfs:comment "El precio de un evento."@es ,
+                    "The price of an event." ;
+       rdfs:label "precio"@es ,
+                  "price" .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#schedule
+:schedule rdf:type owl:DatatypeProperty ;
+          rdfs:domain :CityEvent ;
+          rdfs:range xsd:string ;
+          rdfs:comment "El cronograma de un evento que especifica  el horario de cada día."@es ,
+                       "The schedule of an event scpecifying the hours each day."@en ;
+          rdfs:label "horario"@es ,
+                     "schedule"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructura/equipamiento-municipal#nombre
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructura/equipamiento-municipal#nombre> rdf:type owl:DatatypeProperty ,
+                                                                                                                owl:FunctionalProperty ;
+                                                                                                       rdfs:range xsd:string ;
+                                                                                                       rdfs:comment "Name of the equipment of the municipality where the event will take place."@en ,
+                                                                                                                    "Nombre del equipamiento del ayuntamiento donde tendrá lugar el evento."@es ;
+                                                                                                       rdfs:label "name"@en ,
+                                                                                                                  "nombre"@es .
+
+
+###  https://schema.org/audience
+<https://schema.org/audience> rdf:type owl:DatatypeProperty ,
+                                       owl:FunctionalProperty ;
+                              rdfs:domain <https://schema.org/Event> ;
+                              rdfs:range xsd:string ;
+                              rdfs:comment "El público al que va dirigido el artículo, es decir, el grupo para el que se creó el artículo."@es ,
+                                           "Intended audience for an item, i.e. the group for whom the item was created."@en ;
+                              rdfs:label "audience"@en ,
+                                         "audiencia"@es .
+
+
+###  https://schema.org/description
+<https://schema.org/description> rdf:type owl:DatatypeProperty ,
+                                          owl:FunctionalProperty ;
+                                 rdfs:range xsd:string ;
+                                 rdfs:comment "A description of the item."@en ,
+                                              "Una descripción del artículo."@es ;
+                                 rdfs:label "descripción"@es ,
+                                            "description"@en .
+
+
+###  https://schema.org/doorTime
+<https://schema.org/doorTime> rdf:type owl:DatatypeProperty ,
+                                       owl:FunctionalProperty ;
+                              rdfs:domain <https://schema.org/Event> ;
+                              rdfs:range xsd:dateTime ;
+                              rdfs:comment "La hora de inicio de la admisión."@es ,
+                                           "The time admission will commence."@en ;
+                              rdfs:label "hora de apertura"@es ,
+                                         "opening time"@en .
+
+
+###  https://schema.org/encodingFormat
+<https://schema.org/encodingFormat> rdf:type owl:DatatypeProperty ,
+                                             owl:FunctionalProperty ;
+                                    rdfs:domain <https://schema.org/CreativeWork> ;
+                                    rdfs:range xsd:string ;
+                                    rdfs:comment "File format type"@en ,
+                                                 "Tipo del formato del archivo"@es ;
+                                    rdfs:label "file format"@en ,
+                                               "formato archivo"@es .
+
+
+###  https://schema.org/endDate
+<https://schema.org/endDate> rdf:type owl:DatatypeProperty ,
+                                      owl:FunctionalProperty ;
+                             rdfs:domain <https://schema.org/Event> ;
+                             rdfs:range xsd:dateTime ;
+                             rdfs:comment "La fecha y hora de finalización del artículo"@es ,
+                                          "The end date and time of the item"@en ;
+                             rdfs:label "end date"@en ,
+                                        "fecha fin"@es .
+
+
+###  https://schema.org/eventStatus
+<https://schema.org/eventStatus> rdf:type owl:DatatypeProperty ,
+                                          owl:FunctionalProperty ;
+                                 rdfs:domain <https://schema.org/Event> ;
+                                 rdfs:range xsd:string ;
+                                 rdfs:comment "An eventStatus of an event represents its status; particularly useful when an event is cancelled or rescheduled."@en ,
+                                              "El estado de un evento representa su situación; especialmente útil cuando un evento se cancela o se reprograma."@es ;
+                                 rdfs:label "estado del evento"@es ,
+                                            "event status"@en .
+
+
+###  https://schema.org/image
+<https://schema.org/image> rdf:type owl:DatatypeProperty ,
+                                    owl:FunctionalProperty ;
+                           rdfs:range xsd:anyURI ;
+                           rdfs:comment "An image of the item."@en ,
+                                        "Una imagen del artículo."@es ;
+                           rdfs:label "image"@en ,
+                                      "imagen"@es .
+
+
+###  https://schema.org/isAccessibleForFree
+<https://schema.org/isAccessibleForFree> rdf:type owl:DatatypeProperty ,
+                                                  owl:FunctionalProperty ;
+                                         rdfs:domain :CityEvent ;
+                                         rdfs:range xsd:boolean ;
+                                         rdfs:comment "A flag to signal that the item, event, or place is accessible for free."@en ,
+                                                      "Una bandera para señalar que el artículo, evento o lugar es accesible de forma gratuita."@es ;
+                                         rdfs:label "es accesible gratis"@es ,
+                                                    "is accessible free"@en .
+
+
+###  https://schema.org/maximumAttendeeCapacity
+<https://schema.org/maximumAttendeeCapacity> rdf:type owl:DatatypeProperty ,
+                                                      owl:FunctionalProperty ;
+                                             rdfs:domain <https://schema.org/Event> ;
+                                             rdfs:range xsd:integer ;
+                                             rdfs:comment "El número total de personas que pueden asistir a un evento o local."@es ,
+                                                          "The total number of individuals that may attend an event or venue."@en ;
+                                             rdfs:label "capacidad máxima"@es ,
+                                                        "maximun attendee capacity"@en .
+
+
+###  https://schema.org/name
+<https://schema.org/name> rdf:type owl:DatatypeProperty ,
+                                   owl:FunctionalProperty ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "El nombre de un elemento"@es ,
+                                       "The name of the item."@en ;
+                          rdfs:label "name" .
+
+
+###  https://schema.org/startDate
+<https://schema.org/startDate> rdf:type owl:DatatypeProperty ,
+                                        owl:FunctionalProperty ;
+                               rdfs:domain <https://schema.org/Event> ;
+                               rdfs:range xsd:dateTime ;
+                               rdfs:comment "La fecha y la hora de inicio del artículo"@es ,
+                                            "The start date and time of the item"@en ;
+                               rdfs:label "fecha inicio"@es ,
+                                          "start date"@en .
+
+
+###  https://schema.org/typicalAgeRange
+<https://schema.org/typicalAgeRange> rdf:type owl:DatatypeProperty ,
+                                              owl:FunctionalProperty ;
+                                     rdfs:domain <https://schema.org/Event> ;
+                                     rdfs:range xsd:string ;
+                                     rdfs:comment "El rango de edad típico esperado"@es ,
+                                                  "The typical expected age range"@en ;
+                                     rdfs:label "rango de edad"@es ,
+                                                "typical age range"@en .
+
+
+###  https://schema.org/url
+<https://schema.org/url> rdf:type owl:DatatypeProperty ,
+                                  owl:FunctionalProperty ;
+                         rdfs:range xsd:anyURI ;
+                         rdfs:comment "Enlace del artículo"@es ,
+                                      "URL of the item"@en ;
+                         rdfs:label "enlace"@es ,
+                                    "url"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://schema.org/CreativeWork
+<http://schema.org/CreativeWork> rdf:type owl:Class ;
+                                 rdfs:comment "El tipo más genérico de trabajo creativo, que incluye libros, películas, fotografías, programas informáticos, etc."@es ,
+                                              "The most generic kind of creative work, including books, movies, photographs, software programs, etc."@en ;
+                                 rdfs:label "Creative work"@en ,
+                                            "Trabajo creativo"@es .
+
+
+###  http://schema.org/Organization
+<http://schema.org/Organization> rdf:type owl:Class ;
+                                 rdfs:comment "A collection of people organized together into a community or other social, commercial or political structure."@es ,
+                                              "a collection of people organized together into a community or other social, commercial or political structure."@en ;
+                                 rdfs:label "Organización"@es ,
+                                            "Organization"@en .
+
+
+###  http://schema.org/PostalAddress
+<http://schema.org/PostalAddress> rdf:type owl:Class ;
+                                  rdfs:comment "Dirección para envío de correo."@es ,
+                                               "The mailing address."@en ;
+                                  rdfs:label "Dirección postal"@es ,
+                                             "Postal address"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#CityEvent
+:CityEvent rdf:type owl:Class ;
+           rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ,
+                           <https://schema.org/Event> ;
+           rdfs:comment "An event that will take place in a city."@en ,
+                        "Evento que tendrá lugar en una ciudad."@es ;
+           rdfs:label "Evento" .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> rdf:type owl:Class ;
+                                                                                                           rdfs:subClassOf <http://schema.org/PostalAddress> ;
+                                                                                                           rdfs:comment "Dirección postal en España."@es ,
+                                                                                                                        "Postal address in Spain."@en ;
+                                                                                                           rdfs:label "Dirección postal"@es ,
+                                                                                                                      "Postal address"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismos-infraestructuras/infraestructura#Facility
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismos-infraestructuras/infraestructura#Facility> rdf:type owl:Class ;
+                                                                                                    rdfs:comment "Hace referencia a edificios de servicios (públicos o privados), zonas de ocio, zonas comerciales o cualquier otro elemento  que afecte directamente a la movilidad, actuando como un foco de atracción de personas o vehículos."@es ,
+                                                                                                                 "It refers to service buildings (public or private), leisure areas, commercial areas or any other element that directly affects mobility, acting as a focus of attraction for persons or vehicles."@en ;
+                                                                                                    rdfs:label "Equipamiento"@es ,
+                                                                                                               "Facility"@en .
+
+
+###  http://www.opengis.net/ont/geosparql#Feature
+<http://www.opengis.net/ont/geosparql#Feature> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.opengis.net/ont/geosparql#SpatialObject> ;
+                                               owl:disjointWith <http://www.opengis.net/ont/geosparql#Geometry> ;
+                                               <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" ;
+                                               <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" ;
+                                               <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^xsd:date ;
+                                               <http://purl.org/dc/elements/1.1/description> """
+      This class represents the top-level feature type. This class is 
+      equivalent to GFI_Feature defined in ISO 19156:2011, and it is 
+      superclass of all feature types.
+    """@en ;
+                                               rdfs:comment """
+      This class represents the top-level feature type. This class is 
+      equivalent to GFI_Feature defined in ISO 19156:2011, and it is 
+      superclass of all feature types.
+    """@en ;
+                                               rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ,
+                                                                <http://www.opengis.net/ont/gml> ,
+                                                                <http://www.opengis.net/spec/geosparql/1.0> ;
+                                               rdfs:label "Feature"@en ;
+                                               <http://www.w3.org/2004/02/skos/core#definition> """
+      This class represents the top-level feature type. This class is 
+      equivalent to GFI_Feature defined in ISO 19156:2011, and it is 
+      superclass of all feature types.
+    """@en ;
+                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Feature"@en .
+
+
+###  http://www.opengis.net/ont/geosparql#Geometry
+<http://www.opengis.net/ont/geosparql#Geometry> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.opengis.net/ont/geosparql#SpatialObject> ;
+                                                <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" ;
+                                                <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" ;
+                                                <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^xsd:date ;
+                                                <http://purl.org/dc/elements/1.1/description> """
+      The class represents the top-level geometry type. This class is 
+      equivalent to the UML class GM_Object defined in ISO 19107, and 
+      it is superclass of all geometry types.
+    """@en ;
+                                                rdfs:comment """
+      The class represents the top-level geometry type. This class is 
+      equivalent to the UML class GM_Object defined in ISO 19107, and 
+      it is superclass of all geometry types.
+    """@en ;
+                                                rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ,
+                                                                 <http://www.opengis.net/ont/gml> ,
+                                                                 <http://www.opengis.net/spec/geosparql/1.0> ;
+                                                rdfs:label "Geometry"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> """
+      The class represents the top-level geometry type. This class is 
+      equivalent to the UML class GM_Object defined in ISO 19107, and 
+      it is superclass of all geometry types.
+    """@en ;
+                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Geometry"@en .
+
+
+###  http://www.opengis.net/ont/geosparql#SpatialObject
+<http://www.opengis.net/ont/geosparql#SpatialObject> rdf:type owl:Class ;
+                                                     <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" ;
+                                                     <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" ;
+                                                     <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^xsd:date ;
+                                                     <http://purl.org/dc/elements/1.1/description> """
+      The class spatial-object represents everything that can have 
+      a spatial representation. It is superclass of feature and geometry.
+    """@en ;
+                                                     rdfs:comment """
+      The class spatial-object represents everything that can have 
+      a spatial representation. It is superclass of feature and geometry.
+    """@en ;
+                                                     rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ,
+                                                                      <http://www.opengis.net/ont/gml> ,
+                                                                      <http://www.opengis.net/spec/geosparql/1.0> ;
+                                                     rdfs:label "SpatialObject"@en ;
+                                                     <http://www.w3.org/2004/02/skos/core#definition> """
+      The class spatial-object represents everything that can have 
+      a spatial representation. It is superclass of feature and geometry.
+    """@en ;
+                                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "SpatialObject"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class ;
+                                              owl:disjointWith <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                              rdfs:comment "An abstract idea or notion; a unit of thought."@en ;
+                                              rdfs:label "Concept"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class ;
+                                                    rdfs:comment "A set of concepts, optionally including statements about semantic relationships between those concepts."@en ;
+                                                    rdfs:label "Concept Scheme"@en .
+
+
+###  https://schema.org/CreativeWork
+<https://schema.org/CreativeWork> rdf:type owl:Class ;
+                                  rdfs:comment "El tipo más genérico de trabajo creativo, que incluye libros, películas, fotografías, programas de software, etc."@es ,
+                                               "The most generic kind of creative work, including books, movies, photographs, software programs, etc."@en ;
+                                  rdfs:label "Creative Work"@en ,
+                                             "Trabajo creativo"@es .
+
+
+###  https://schema.org/DigitalDocument
+<https://schema.org/DigitalDocument> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://schema.org/CreativeWork> ;
+                                     rdfs:comment "An electronic file or document."@en ,
+                                                  "Un archivo o documento electrónico."@es ;
+                                     rdfs:label "Digital Document"@en ,
+                                                "Documento digital"@es .
+
+
+###  https://schema.org/Event
+<https://schema.org/Event> rdf:type owl:Class ;
+                           rdfs:comment "An event happening at a certain time and location, such as a concert, lecture, or festival."@en ,
+                                        "Un evento que tiene lugar a una hora y en un lugar determinados, como un concierto, una conferencia o un festival."@es ;
+                           rdfs:label "Event" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/edint/AttendanceMode
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/AttendanceMode> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/edint/EventStatus
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/EventStatus> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/edint/EventType
+<http://vocab.linkeddata.es/datosabiertos/kos/edint/EventType> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://purl.org/dc/terms/identifier> rdfs:comment "La propiedad identificador representa cualquier tipo de identificador para cualquier tipo de Cosa, como ISBNs, códigos GTIN, UUIDs, etc."@es ,
+                                                   "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc"@en ;
+                                      rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                      rdfs:label "identificador"@es ,
+                                                 "identifier"@en .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
