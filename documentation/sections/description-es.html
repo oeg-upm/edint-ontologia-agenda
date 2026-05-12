@@ -3,3 +3,52 @@
 <p><center><img src="images/diagrama-conceptual.png"/><figcaption>
 Figura 1. Modelo conceptual de la ontología</figcaption></center></p></span>
 
+<pre><textarea style="resize:none" readonly id="code2" name="code" rows="25" cols="100">
+&lt;http://vocab.linkeddata.es/datosabiertos/recurso/city-event/madrid-deporte-50292978&gt;
+    a edintagenda:CityEvent ;
+    dct:identifier "50292978" ;
+    rdfs:label "IV Cross escolar de Barajas"@es ;
+    schema:startDate "2026-05-22T00:00:00+02:00"^^xsd:dateTime ;
+    schema:endDate "2026-05-22T23:59:00+02:00"^^xsd:dateTime ;
+    schema:isAccessibleForFree true ;
+    schema:eventStatus edinteventstatus:Scheduled ;
+    edintagenda:attendanceMode edintattendancemode:InPerson ;
+    edintagenda:eventType edinteventtype:ActividadesDeportivas ;
+    edintagenda:schedule "09:00"@es ;
+    edintagenda:documentation &lt;http://vocab.linkeddata.es/datosabiertos/recurso/documento-digital/madrid-deporte-50292978&gt; ;
+    edintagenda:takesPlaceIn &lt;http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento/parque-juan-carlos-i&gt; ;
+    edintagenda:organizedBy &lt;http://vocab.linkeddata.es/datosabiertos/recurso/organizacion/ayuntamiento-madrid&gt; ;
+    schema:address &lt;http://vocab.linkeddata.es/datosabiertos/recurso/direccion-postal/parque-juan-carlos-i&gt; .
+
+&lt;http://vocab.linkeddata.es/datosabiertos/recurso/documento-digital/madrid-deporte-50292978&gt;
+    a schema:DigitalDocument ;
+    dct:identifier "50292978" ;
+    rdfs:label "Página del evento IV Cross escolar de Barajas"@es ;
+    schema:url &lt;http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&amp;vgnextoid=00c0ae46863dd910VgnVCM200000f921e388RCRD&gt; ;
+    schema:encodingFormat "text/html" .
+
+&lt;http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento/parque-juan-carlos-i&gt;
+    a edintagenda:Facility, gsp:Feature ;
+    rdfs:label "Parque Juan Carlos I"@es ;
+    schema:url &lt;http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&amp;vgnextoid=8d9a78a0dea9e210VgnVCM1000000b205a0aRCRD&gt; ;
+    gsp:hasGeometry &lt;http://vocab.linkeddata.es/datosabiertos/recurso/geometria/parque-juan-carlos-i&gt; .
+
+&lt;http://vocab.linkeddata.es/datosabiertos/recurso/direccion-postal/parque-juan-carlos-i&gt;
+    a schema:PostalAddress ;
+    schema:streetAddress "GLORIETA S.A.R. DON JUAN DE BORBON Y BATTEMBERG, 5 5"@es ;
+    schema:addressLocality "Madrid"@es ;
+    schema:addressRegion "BARAJAS"@es ;
+    schema:postalCode "28042" ;
+    schema:addressCountry "ES" .
+
+&lt;http://vocab.linkeddata.es/datosabiertos/recurso/geometria/parque-juan-carlos-i&gt;
+    a gsp:Geometry ;
+    gsp:asWKT "POINT(-3.614888870630359 40.45999848510341)"^^gsp:wktLiteral .
+
+</textarea></pre>
+<script>
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        mode: "text/turtle",
+        matchBrackets: true
+    });
+</script>
