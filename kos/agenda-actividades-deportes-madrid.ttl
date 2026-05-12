@@ -1,0 +1,58 @@
+@prefix rdf:                       <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:                      <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:                       <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:                       <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:                      <http://www.w3.org/2004/02/skos/core#> .
+@prefix schema:                    <https://schema.org/> .
+@prefix gsp:                       <http://www.opengis.net/ont/geosparql#> .
+@prefix dct:                       <http://purl.org/dc/terms/> .
+@prefix cc:                        <http://creativecommons.org/ns#> .
+
+@prefix edintagenda:               <http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#> .
+@prefix edintkos:                  <http://vocab.linkeddata.es/datosabiertos/kos/cultura-ocio/agenda/> .
+@prefix edinteventstatus:          <http://vocab.linkeddata.es/datosabiertos/kos/cultura-ocio/agenda/event-status/> .
+@prefix edintattendancemode:       <http://vocab.linkeddata.es/datosabiertos/kos/cultura-ocio/agenda/attendance-mode/> .
+@prefix edinteventtype:            <http://vocab.linkeddata.es/datosabiertos/kos/cultura-ocio/agenda/event-type/> .
+
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/city-event/madrid-deporte-50292978>
+    a edintagenda:CityEvent ;
+    dct:identifier "50292978" ;
+    schema:identifier "50292978" ;
+    schema:name "IV Cross escolar de Barajas"@es ;
+    schema:startDate "2026-05-22T00:00:00+02:00"^^xsd:dateTime ;
+    schema:endDate "2026-05-22T23:59:00+02:00"^^xsd:dateTime ;
+    schema:isAccessibleForFree true ;
+    schema:eventStatus edinteventstatus:Scheduled ;
+    edintagenda:attendanceMode edintattendancemode:Presential ;
+    edintagenda:eventType edinteventtype:ActividadesDeportivas ;
+    edintagenda:schedule "09:00"@es ;
+    edintagenda:documentation <http://vocab.linkeddata.es/datosabiertos/recurso/documento-digital/madrid-deporte-50292978> ;
+    edintagenda:takesPlaceIn <http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento/parque-juan-carlos-i> ;
+    edintagenda:organizedBy <http://vocab.linkeddata.es/datosabiertos/recurso/organizacion/ayuntamiento-madrid> ;
+    schema:address <http://vocab.linkeddata.es/datosabiertos/recurso/direccion-postal/parque-juan-carlos-i> .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/documento-digital/madrid-deporte-50292978>
+    a schema:DigitalDocument ;
+    dct:identifier "50292978" ;
+    schema:name "Página del evento IV Cross escolar de Barajas"@es ;
+    schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=00c0ae46863dd910VgnVCM200000f921e388RCRD> ;
+    schema:encodingFormat "text/html" .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento/parque-juan-carlos-i>
+    a edintagenda:Facility, gsp:Feature ;
+    schema:name "Parque Juan Carlos I"@es ;
+    schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=8d9a78a0dea9e210VgnVCM1000000b205a0aRCRD> ;
+    gsp:hasGeometry <http://vocab.linkeddata.es/datosabiertos/recurso/geometria/parque-juan-carlos-i> .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/direccion-postal/parque-juan-carlos-i>
+    a schema:PostalAddress ;
+    schema:streetAddress "GLORIETA S.A.R. DON JUAN DE BORBON Y BATTEMBERG, 5 5"@es ;
+    schema:addressLocality "Madrid"@es ;
+    schema:addressRegion "BARAJAS"@es ;
+    schema:postalCode "28042" ;
+    schema:addressCountry "ES" .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/geometria/parque-juan-carlos-i>
+    a gsp:Geometry ;
+    gsp:asWKT "POINT(-3.614888870630359 40.45999848510341)"^^gsp:wktLiteral .

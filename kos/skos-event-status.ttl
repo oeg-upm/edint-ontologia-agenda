@@ -1,0 +1,64 @@
+@prefix rdf:                  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:                 <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:                  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:                  <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct:                  <http://purl.org/dc/terms/> .
+@prefix skos:                 <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc:                   <http://creativecommons.org/ns#> .
+
+@prefix edintagenda:          <http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#> .
+@prefix edintkos:             <http://vocab.linkeddata.es/datosabiertos/kos/cultura-ocio/agenda/> .
+@prefix edinteventstatus:     <http://vocab.linkeddata.es/datosabiertos/kos/cultura-ocio/agenda/event-status/> .
+
+
+#################################################################
+#
+# SKOS: EventStatus
+#
+#################################################################
+
+edintkos:EventStatus
+    a skos:ConceptScheme ;
+    dct:issued "2026-05-12"^^xsd:date ;
+    dct:modified "2026-05-12"^^xsd:date ;
+    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    rdfs:comment "This concept scheme belongs to the set of controlled SKOS-based thesauri used by the ontologies from the EDINT data space."@en ;
+    rdfs:comment "Este esquema de conceptos pertenece al conjunto de tesauros SKOS usados por las ontologías del espacio de datos EDINT."@es ;
+    rdfs:label "Event status"@en ;
+    rdfs:label "Estado del evento"@es ;
+    dct:title "Concept scheme grouping event statuses"@en ;
+    dct:title "Esquema de conceptos agrupando estados de eventos"@es ;
+    skos:note "Values currently based on the status values used to describe cultural, sports and social events in public agenda datasets."@en ;
+    skos:note "Valores basados inicialmente en los estados usados para describir eventos culturales, deportivos y sociales en conjuntos de datos públicos de agenda."@es .
+
+edinteventstatus:Scheduled
+    a skos:Concept ;
+    skos:inScheme edintkos:EventStatus ;
+    skos:prefLabel "Scheduled"@en ;
+    skos:prefLabel "Programado"@es ;
+    skos:definition "Published event expected to take place according to the source agenda."@en ;
+    skos:definition "Evento publicado y previsto en la agenda de origen."@es .
+
+edinteventstatus:Cancelled
+    a skos:Concept ;
+    skos:inScheme edintkos:EventStatus ;
+    skos:prefLabel "Cancelled"@en ;
+    skos:prefLabel "Cancelado"@es ;
+    skos:definition "Event that will not take place."@en ;
+    skos:definition "Evento que no se celebrará."@es .
+
+edinteventstatus:Postponed
+    a skos:Concept ;
+    skos:inScheme edintkos:EventStatus ;
+    skos:prefLabel "Postponed"@en ;
+    skos:prefLabel "Aplazado"@es ;
+    skos:definition "Event expected to take place at a later date that has not yet been confirmed."@en ;
+    skos:definition "Evento que se celebrará en una fecha posterior todavía no confirmada."@es .
+
+edinteventstatus:Rescheduled
+    a skos:Concept ;
+    skos:inScheme edintkos:EventStatus ;
+    skos:prefLabel "Rescheduled"@en ;
+    skos:prefLabel "Reprogramado"@es ;
+    skos:definition "Event whose original date or time has been changed."@en ;
+    skos:definition "Evento cuya fecha u horario inicialmente previsto ha cambiado."@es .

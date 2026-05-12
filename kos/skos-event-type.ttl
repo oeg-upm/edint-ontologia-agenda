@@ -1,0 +1,96 @@
+@prefix rdf:                  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:                 <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:                  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:                  <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct:                  <http://purl.org/dc/terms/> .
+@prefix skos:                 <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc:                   <http://creativecommons.org/ns#> .
+
+@prefix edintagenda:          <http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#> .
+@prefix edintkos:             <http://vocab.linkeddata.es/datosabiertos/kos/cultura-ocio/agenda/> .
+@prefix edinteventtype:       <http://vocab.linkeddata.es/datosabiertos/kos/cultura-ocio/agenda/event-type/> .
+
+
+#################################################################
+#
+# SKOS: EventType
+#
+#################################################################
+
+edintkos:EventType
+    a skos:ConceptScheme ;
+    dct:issued "2026-05-12"^^xsd:date ;
+    dct:modified "2026-05-12"^^xsd:date ;
+    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    rdfs:comment "This concept scheme belongs to the set of controlled SKOS-based thesauri used by the ontologies from the EDINT data space."@en ;
+    rdfs:comment "Este esquema de conceptos pertenece al conjunto de tesauros SKOS usados por las ontologías del espacio de datos EDINT."@es ;
+    rdfs:label "Event type"@en ;
+    rdfs:label "Tipo de evento"@es ;
+    dct:title "Concept scheme grouping cultural, sports and social event types"@en ;
+    dct:title "Esquema de conceptos agrupando tipos de eventos culturales, deportivos y sociales"@es ;
+    skos:note "Values currently based on the thematic categories used in public agenda datasets from Spanish local and regional administrations."@en ;
+    skos:note "Valores basados inicialmente en las categorías temáticas usadas en conjuntos de datos públicos de agenda de administraciones locales y autonómicas españolas."@es .
+
+edinteventtype:Cultural
+    a skos:Concept ;
+    skos:inScheme edintkos:EventType ;
+    skos:prefLabel "Cultural"@en ;
+    skos:prefLabel "Cultural"@es ;
+    skos:definition "Event related to cultural, artistic, heritage or educational activities."@en ;
+    skos:definition "Evento relacionado con actividades culturales, artísticas, patrimoniales o educativas."@es .
+
+edinteventtype:Sports
+    a skos:Concept ;
+    skos:inScheme edintkos:EventType ;
+    skos:prefLabel "Sports"@en ;
+    skos:prefLabel "Deportivo"@es ;
+    skos:definition "Event related to sports practice, promotion or exhibition."@en ;
+    skos:definition "Evento relacionado con la práctica, promoción o exhibición deportiva."@es .
+
+edinteventtype:Social
+    a skos:Concept ;
+    skos:inScheme edintkos:EventType ;
+    skos:prefLabel "Social"@en ;
+    skos:prefLabel "Social"@es ;
+    skos:definition "Event aimed at citizen participation, coexistence, inclusion or community action."@en ;
+    skos:definition "Evento orientado a la participación ciudadana, convivencia, inclusión o acción comunitaria."@es .
+
+edinteventtype:Concierto
+    a skos:Concept ;
+    skos:inScheme edintkos:EventType ;
+    skos:prefLabel "Concert"@en ;
+    skos:prefLabel "Concierto"@es ;
+    skos:notation "Concierto" ;
+    skos:broader edinteventtype:Cultural .
+
+edinteventtype:Ferias
+    a skos:Concept ;
+    skos:inScheme edintkos:EventType ;
+    skos:prefLabel "Fairs"@en ;
+    skos:prefLabel "Ferias"@es ;
+    skos:notation "/contenido/actividades/Ferias" ;
+    skos:broader edinteventtype:Cultural .
+
+edinteventtype:Exposicion
+    a skos:Concept ;
+    skos:inScheme edintkos:EventType ;
+    skos:prefLabel "Exhibition"@en ;
+    skos:prefLabel "Exposición"@es ;
+    skos:notation "Exposición" ;
+    skos:broader edinteventtype:Cultural .
+
+edinteventtype:ActividadesDeportivas
+    a skos:Concept ;
+    skos:inScheme edintkos:EventType ;
+    skos:prefLabel "Sports activities"@en ;
+    skos:prefLabel "Actividades deportivas"@es ;
+    skos:notation "/contenido/actividades/ActividadesDeportivas" ;
+    skos:broader edinteventtype:Sports .
+
+edinteventtype:ArtesEscenicasSocial
+    a skos:Concept ;
+    skos:inScheme edintkos:EventType ;
+    skos:prefLabel "Performing arts with social purpose"@en ;
+    skos:prefLabel "Artes escénicas de carácter social"@es ;
+    skos:notation "Artes escénicas" ;
+    skos:broader edinteventtype:Social .

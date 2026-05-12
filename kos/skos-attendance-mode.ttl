@@ -1,0 +1,58 @@
+@prefix rdf:                  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:                 <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:                  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:                  <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct:                  <http://purl.org/dc/terms/> .
+@prefix skos:                 <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc:                   <http://creativecommons.org/ns#> .
+
+@prefix edintagenda:          <http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#> .
+@prefix edintkos:             <http://vocab.linkeddata.es/datosabiertos/kos/cultura-ocio/agenda/> .
+@prefix edintattendancemode:  <http://vocab.linkeddata.es/datosabiertos/kos/cultura-ocio/agenda/attendance-mode/> .
+
+
+#################################################################
+#
+# SKOS: AttendanceMode
+#
+#################################################################
+
+edintkos:AttendanceMode
+    a skos:ConceptScheme ;
+    dct:issued "2026-05-12"^^xsd:date ;
+    dct:modified "2026-05-12"^^xsd:date ;
+    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    rdfs:comment "This concept scheme belongs to the set of controlled SKOS-based thesauri used by the ontologies from the EDINT data space."@en ;
+    rdfs:comment "Este esquema de conceptos pertenece al conjunto de tesauros SKOS usados por las ontologías del espacio de datos EDINT."@es ;
+    rdfs:label "Attendance mode"@en ;
+    rdfs:label "Modalidad de asistencia"@es ;
+    dct:title "Concept scheme grouping event attendance modes"@en ;
+    dct:title "Esquema de conceptos agrupando modalidades de asistencia a eventos"@es ;
+    skos:note "Values currently based on the attendance modes used to describe cultural, sports and social events in public agenda datasets."@en ;
+    skos:note "Valores basados inicialmente en las modalidades de asistencia usadas para describir eventos culturales, deportivos y sociales en conjuntos de datos públicos de agenda."@es .
+
+edintattendancemode:Presential
+    a skos:Concept ;
+    skos:inScheme edintkos:AttendanceMode ;
+    skos:prefLabel "Presential"@en ;
+    skos:prefLabel "Presencial"@es ;
+    skos:definition "Event taking place in a physical facility, venue or address."@en ;
+    skos:definition "Evento que se desarrolla en un equipamiento, instalación o dirección física."@es .
+
+edintattendancemode:Online
+    a skos:Concept ;
+    skos:inScheme edintkos:AttendanceMode ;
+    skos:prefLabel "Online"@en ;
+    skos:prefLabel "En línea"@es ;
+    skos:altLabel "Online"@es ;
+    skos:definition "Event held through digital means."@en ;
+    skos:definition "Evento celebrado mediante medios digitales."@es .
+
+edintattendancemode:Mixed
+    a skos:Concept ;
+    skos:inScheme edintkos:AttendanceMode ;
+    skos:prefLabel "Mixed"@en ;
+    skos:prefLabel "Mixta"@es ;
+    skos:altLabel "Híbrida"@es ;
+    skos:definition "Event that allows both physical and online attendance."@en ;
+    skos:definition "Evento que permite asistencia presencial y asistencia en línea."@es .
