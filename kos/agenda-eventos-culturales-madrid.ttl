@@ -18,8 +18,7 @@
 <http://vocab.linkeddata.es/datosabiertos/recurso/city-event/madrid-cultural-50280843>
     a edintagenda:CityEvent ;
     dct:identifier "50280843" ;
-    schema:identifier "50280843" ;
-    schema:name "10.ª Feria del libro en Puente de Vallecas"@es ;
+    rdfs:label "10.ª Feria del libro en Puente de Vallecas"@es ;
     schema:startDate "2026-05-08T00:00:00+02:00"^^xsd:dateTime ;
     schema:endDate "2026-05-24T23:59:00+02:00"^^xsd:dateTime ;
     schema:isAccessibleForFree false ;
@@ -35,14 +34,14 @@
 <http://vocab.linkeddata.es/datosabiertos/recurso/documento-digital/madrid-cultural-50280843>
     a schema:DigitalDocument ;
     dct:identifier "50280843" ;
-    schema:name "Página del evento 10.ª Feria del libro en Puente de Vallecas"@es ;
+    rdfs:label "Página del evento 10.ª Feria del libro en Puente de Vallecas"@es ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=9112b6b12eb8d910VgnVCM200000f921e388RCRD> ;
     schema:encodingFormat "text/html" ;
     dct:source <https://datos.madrid.es> .
 
 <http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento/jardin-del-bulevar-de-pena-gorbea>
     a edintagenda:Facility, gsp:Feature ;
-    schema:name "Jardín del Bulevar de Peña Gorbea"@es ;
+    rdfs:label "Jardín del Bulevar de Peña Gorbea"@es ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=1aaf38317117e210VgnVCM1000000b205a0aRCRD> ;
     gsp:hasGeometry <http://vocab.linkeddata.es/datosabiertos/recurso/geometria/jardin-del-bulevar-de-pena-gorbea> .
 

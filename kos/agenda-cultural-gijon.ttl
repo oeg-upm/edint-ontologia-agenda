@@ -18,8 +18,7 @@
 <http://vocab.linkeddata.es/datosabiertos/recurso/city-event/gijon-40658>
     a edintagenda:CityEvent ;
     dct:identifier "40658" ;
-    schema:identifier "40658" ;
-    schema:name "Festival solidario a favor de la Cruz Roja"@es ;
+    rdfs:label "Festival solidario a favor de la Cruz Roja"@es ;
     schema:startDate "2026-05-22T19:00:00+02:00"^^xsd:dateTime ;
     schema:endDate "2026-05-22"^^xsd:date ;
     schema:audience "General"@es ;
@@ -35,14 +34,14 @@
 <http://vocab.linkeddata.es/datosabiertos/recurso/documento-digital/gijon-40658>
     a schema:DigitalDocument ;
     dct:identifier "40658" ;
-    schema:name "Página del evento Festival solidario a favor de la Cruz Roja"@es ;
+    rdfs:label "Página del evento Festival solidario a favor de la Cruz Roja"@es ;
     schema:url <https://www.gijon.es/festival-solidario-favor-de-la-cruz-roja> ;
     schema:encodingFormat "text/html" ;
     dct:source <https://www.gijon.es> .
 
 <http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento/centro-municipal-integrado-ateneo-de-la-calzada>
     a edintagenda:Facility ;
-    schema:name "Centro Municipal Integrado Ateneo de La Calzada"@es .
+    rdfs:label "Centro Municipal Integrado Ateneo de La Calzada"@es .
 
 <http://vocab.linkeddata.es/datosabiertos/recurso/direccion-postal/centro-municipal-integrado-ateneo-de-la-calzada>
     a schema:PostalAddress ;

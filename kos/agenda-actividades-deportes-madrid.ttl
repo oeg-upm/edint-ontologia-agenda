@@ -18,8 +18,7 @@
 <http://vocab.linkeddata.es/datosabiertos/recurso/city-event/madrid-deporte-50292978>
     a edintagenda:CityEvent ;
     dct:identifier "50292978" ;
-    schema:identifier "50292978" ;
-    schema:name "IV Cross escolar de Barajas"@es ;
+    rdfs:label "IV Cross escolar de Barajas"@es ;
     schema:startDate "2026-05-22T00:00:00+02:00"^^xsd:dateTime ;
     schema:endDate "2026-05-22T23:59:00+02:00"^^xsd:dateTime ;
     schema:isAccessibleForFree true ;
@@ -35,13 +34,13 @@
 <http://vocab.linkeddata.es/datosabiertos/recurso/documento-digital/madrid-deporte-50292978>
     a schema:DigitalDocument ;
     dct:identifier "50292978" ;
-    schema:name "Página del evento IV Cross escolar de Barajas"@es ;
+    rdfs:label "Página del evento IV Cross escolar de Barajas"@es ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=00c0ae46863dd910VgnVCM200000f921e388RCRD> ;
     schema:encodingFormat "text/html" .
 
 <http://vocab.linkeddata.es/datosabiertos/recurso/equipamiento/parque-juan-carlos-i>
     a edintagenda:Facility, gsp:Feature ;
-    schema:name "Parque Juan Carlos I"@es ;
+    rdfs:label "Parque Juan Carlos I"@es ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=8d9a78a0dea9e210VgnVCM1000000b205a0aRCRD> ;
     gsp:hasGeometry <http://vocab.linkeddata.es/datosabiertos/recurso/geometria/parque-juan-carlos-i> .
 
