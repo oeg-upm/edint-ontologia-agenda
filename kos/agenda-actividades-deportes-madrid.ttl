@@ -23,7 +23,7 @@
     schema:endDate "2026-05-22T23:59:00+02:00"^^xsd:dateTime ;
     schema:isAccessibleForFree true ;
     schema:eventStatus edinteventstatus:Scheduled ;
-    edintagenda:attendanceMode edintattendancemode:Presential ;
+    edintagenda:attendanceMode edintattendancemode:InPerson ;
     edintagenda:eventType edinteventtype:ActividadesDeportivas ;
     edintagenda:schedule "09:00"@es ;
     edintagenda:documentation <http://vocab.linkeddata.es/datosabiertos/recurso/documento-digital/madrid-deporte-50292978> ;

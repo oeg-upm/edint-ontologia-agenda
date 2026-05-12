@@ -23,7 +23,7 @@
     schema:endDate "2026-05-24T23:59:00+02:00"^^xsd:dateTime ;
     schema:isAccessibleForFree false ;
     schema:eventStatus edinteventstatus:Scheduled ;
-    edintagenda:attendanceMode edintattendancemode:Presential ;
+    edintagenda:attendanceMode edintattendancemode:InPerson ;
     edintagenda:eventType edinteventtype:Ferias ;
     edintagenda:schedule "L,M,X,J,V,S,D"@es ;
     edintagenda:documentation <http://vocab.linkeddata.es/datosabiertos/recurso/documento-digital/madrid-cultural-50280843> ;

@@ -23,7 +23,7 @@
     schema:endDate "2026-05-22"^^xsd:date ;
     schema:audience "General"@es ;
     schema:eventStatus edinteventstatus:Scheduled ;
-    edintagenda:attendanceMode edintattendancemode:Presential ;
+    edintagenda:attendanceMode edintattendancemode:InPerson ;
     edintagenda:eventType edinteventtype:ArtesEscenicasSocial ;
     edintagenda:schedule "19:00"@es ;
     edintagenda:documentation <http://vocab.linkeddata.es/datosabiertos/recurso/documento-digital/gijon-40658> ;

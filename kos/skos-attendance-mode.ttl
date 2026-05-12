@@ -31,10 +31,10 @@ edintkos:AttendanceMode
     skos:note "Values currently based on the attendance modes used to describe cultural, sports and social events in public agenda datasets."@en ;
     skos:note "Valores basados inicialmente en las modalidades de asistencia usadas para describir eventos culturales, deportivos y sociales en conjuntos de datos públicos de agenda."@es .
 
-edintattendancemode:Presential
+edintattendancemode:InPerson
     a skos:Concept ;
     skos:inScheme edintkos:AttendanceMode ;
-    skos:prefLabel "Presential"@en ;
+    skos:prefLabel "In-person"@en ;
     skos:prefLabel "Presencial"@es ;
     skos:definition "Event taking place in a physical facility, venue or address."@en ;
     skos:definition "Evento que se desarrolla en un equipamiento, instalación o dirección física."@es .

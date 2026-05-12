@@ -93,4 +93,4 @@ edinteventtype:ArtesEscenicasSocial
     skos:prefLabel "Performing arts with social purpose"@en ;
     skos:prefLabel "Artes escénicas de carácter social"@es ;
     skos:notation "Artes escénicas" ;
-    skos:broader edinteventtype:Social .
+    skos:broader edinteventtype:Cultural .
