@@ -1,0 +1,19 @@
+
+# AGE01: ¿Qué eventos son de tipo concierto?
+
+PREFIX edintagenda: <http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?event ?name ?typeLabel
+WHERE {
+  ?event a edintagenda:CityEvent ;
+         edintagenda:eventType ?type .
+
+  ?type skos:prefLabel ?typeLabel .
+
+  OPTIONAL { ?event schema:name ?name }
+
+  # Filtrar tipo concierto
+  FILTER(CONTAINS(LCASE(?typeLabel), "concierto"))
+}

@@ -1,0 +1,17 @@
+
+
+# AGE06: ¿Dónde se localizan los eventos (información espacial)?
+
+PREFIX edintagenda: <http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#>
+PREFIX schema: <https://schema.org/>
+PREFIX edintinf: <http://vocab.linkeddata.es/datosabiertos/def/urbanismos-infraestructuras/infraestructura#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX gsp: <http://www.opengis.net/ont/geosparql#>
+
+
+SELECT ?event ?name ?geometry
+WHERE {
+  ?event a edintagenda:CityEvent ;
+         gsp:hasGeometry ?geometry ;
+  OPTIONAL { ?event schema:name ?name } .
+}

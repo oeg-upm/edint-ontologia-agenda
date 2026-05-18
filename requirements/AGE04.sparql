@@ -1,0 +1,26 @@
+
+# AGE04: ¿Cuáles son las fechas de inicio y fin de cada próximo evento?
+# Considerando que próximo evento implica que no está cancelado y no ha terminado (su fecha de finalización es posterior o igual a la presente)
+
+PREFIX edintagenda: <http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?event ?name ?startDate ?endDate ?statusLabel
+WHERE {
+  ?event a edintagenda:CityEvent ;
+         edintagenda:eventStatus ?status ;
+         schema:startDate ?startDate ;
+         schema:endDate ?endDate .
+
+  ?status skos:prefLabel ?statusLabel .
+
+  OPTIONAL { ?event schema:name ?name }
+
+  # Excluir eventos cancelados
+  FILTER(!CONTAINS(LCASE(?statusLabel), "cancel"))
+
+  # Fecha de fin posterior al momento actual
+  FILTER(xsd:dateTime(?endDate) >= NOW())
+}

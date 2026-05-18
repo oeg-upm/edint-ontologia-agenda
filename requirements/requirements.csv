@@ -1,0 +1,15 @@
+Identifier,Responsible partner,"Version (optional)
+","Competency Question /
+ Natural language sentence (fact)",Answer (For Competency Questions),"Status (Proposed, Accepted, Rejected, Deprecated)",Comments (optional),Extracted from (provenance),"Priority 
+(High, Medium, Low) (optional)",Relation with other requirements (optional),Associated ontology elements,Relation to ontology elements in other domains
+AGE01,UPM,v0.1.0,¿Qué eventos están registrados en la agenda?,,Proposed,,,,,,
+AGE02,UPM,v0.1.0,¿Qué eventos tienen lugar en un determinado equipamiento?,,Proposed,,,,,,
+AGE03,UPM,v0.1.0,¿Qué eventos organiza una determinada organización?,,Proposed,,,,,,
+AGE04,UPM,v0.1.0,¿Cuáles son las fechas de inicio y fin de cada póximo evento ?,,Proposed,,,,,,
+AGE05,UPM,v0.1.0,"¿Qué modalidad (presencial, oline) tiene cada evento?",,Proposed,,,,,,
+AGE06,UPM,v0.1.0,¿Dónde se localizan los eventos (información espacial)?,,Proposed,,,,,,
+AGE07,UPM,v0.1.0,¿Qué eventos tienen documentación asociada?,,Proposed,,,,,,
+AGE08,UPM,v0.1.0,¿Qué eventos están dirigidos a un público adulto?,,Proposed,,,,,,
+AGE09,UPM,v0.1.0,¿Qué eventos forman parte de otros eventos?,,Proposed,,,,,,
+AGE10,UPM,v0.1.0,¿Qué eventos son de tipo concierto?,,Proposed,,,,,,
+AGE11,UPM,v0.1.0,¿Qué eventos gratuitos se celebran en Madrid en el mes de junio?,,Proposed,,,,,,

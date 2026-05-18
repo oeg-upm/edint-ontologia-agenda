@@ -1,0 +1,21 @@
+
+# AGE05: ¿Qué modalidad tiene cada evento?
+
+PREFIX edintagenda: <http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#>
+PREFIX schema: <https://schema.org/>
+
+SELECT ?event ?name ?mode
+WHERE {
+  ?event a edintagenda:CityEvent ;
+         edintagenda:attendanceMode ?mode .
+  
+  OPTIONAL { ?event schema:name ?name }
+}
+
+# Variante para un evento concreto
+
+SELECT ?modeLabel
+WHERE {
+  <URI_EVENTO> edintagenda:attendanceMode ?mode .
+  ?mode skos:prefLabel ?modeLabel .
+}

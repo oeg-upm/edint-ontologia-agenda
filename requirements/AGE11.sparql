@@ -1,0 +1,23 @@
+
+# AGE11: ¿Qué eventos gratuitos se celebran en Madrid en el mes de junio?
+
+PREFIX edintagenda: <http://vocab.linkeddata.es/datosabiertos/def/cultura-ocio/agenda#>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?event ?name ?startDate ?endDate
+WHERE {
+  ?event a edintagenda:CityEvent ;
+         schema:isAccessibleForFree true ;
+         schema:startDate ?startDate ;
+         schema:address ?address .
+
+  OPTIONAL { ?event schema:endDate ?endDate }
+  OPTIONAL { ?event schema:name ?name }
+
+  # Filtrar por municipio 
+  ?address schema:addressLocality "Madrid" .
+
+  # Filtrar eventos en junio (independientemente del año)
+  FILTER(MONTH(?startDate) = 6)
+}
