@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0">
   <diagram id="pi5Q1mJ39jSUaHIbHjMw" name="diagrama-conceptual">
-    <mxGraphModel dx="1426" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="976" dy="693" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -31,7 +31,7 @@
             <mxPoint x="750" y="409" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="gqLIt7stJMQVaCmjSFlq-10" connectable="0" parent="gqLIt7stJMQVaCmjSFlq-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="edintagenda:takesPlaceIn" vertex="1">
+        <mxCell id="gqLIt7stJMQVaCmjSFlq-10" connectable="0" parent="gqLIt7stJMQVaCmjSFlq-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="edintagenda:takesPlaceIn&lt;div&gt;(seRealizaEn)&lt;/div&gt;" vertex="1">
           <mxGeometry relative="1" x="-0.2071" as="geometry">
             <mxPoint x="11" as="offset" />
           </mxGeometry>
@@ -51,7 +51,7 @@
             <mxPoint x="590" y="323" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="gqLIt7stJMQVaCmjSFlq-13" connectable="0" parent="gqLIt7stJMQVaCmjSFlq-12" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="edintagenda:&lt;div&gt;documentation&lt;/div&gt;&lt;div&gt;(documentación)&lt;/div&gt;" vertex="1">
+        <mxCell id="gqLIt7stJMQVaCmjSFlq-13" connectable="0" parent="gqLIt7stJMQVaCmjSFlq-12" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="edintagenda:&lt;div&gt;documentation&lt;/div&gt;&lt;div&gt;(documentacion)&lt;/div&gt;" vertex="1">
           <mxGeometry relative="1" x="-0.0711" y="2" as="geometry">
             <mxPoint x="-2" y="-2" as="offset" />
           </mxGeometry>
@@ -137,7 +137,7 @@
         </mxCell>
         <mxCell id="gqLIt7stJMQVaCmjSFlq-30" connectable="0" parent="gqLIt7stJMQVaCmjSFlq-29" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="edintagenda:attendanceMode&lt;div&gt;(modoAsistencia)&lt;/div&gt;" vertex="1">
           <mxGeometry relative="1" x="0.3894" y="-3" as="geometry">
-            <mxPoint x="89" as="offset" />
+            <mxPoint x="89" y="-15" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="gqLIt7stJMQVaCmjSFlq-31" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=default;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;strokeColor=#000000;resizeWidth=1;resizeHeight=1;" value="schema:Event" vertex="1">
@@ -176,7 +176,7 @@
             <mxPoint x="590" y="419" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="gqLIt7stJMQVaCmjSFlq-37" connectable="0" parent="gqLIt7stJMQVaCmjSFlq-36" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="schema:eventStatus" vertex="1">
+        <mxCell id="gqLIt7stJMQVaCmjSFlq-37" connectable="0" parent="gqLIt7stJMQVaCmjSFlq-36" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="schema:eventStatus&lt;div&gt;(estadoEvento)&lt;/div&gt;" vertex="1">
           <mxGeometry relative="1" x="0.1009" y="1" as="geometry">
             <mxPoint x="56" as="offset" />
           </mxGeometry>
@@ -184,7 +184,7 @@
         <mxCell id="gqLIt7stJMQVaCmjSFlq-38" parent="1" style="verticalAlign=middle;align=center;vsdxID=334;shape=stencil(nZBLDoAgDERP0z3SIyjew0SURgSD+Lu9kMZoXLhwN9O+tukAlrNpJg1SzDH4QW/URgNYgZTkjA4UkwJUgGXng+6DX1zLfmoymdXo17xh5zmRJ6Q42BWCfc2oJfdAr+Yv+AP9Cb7OJ3H/2JG1HNGz/84klThPVCc=);labelBackgroundColor=none;rounded=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;div&gt;skos:Concept&lt;/div&gt;&lt;div&gt;&amp;lt;&amp;lt;skos:inSchemeedintkos:AttendanceMode&amp;gt;&amp;gt;&lt;/div&gt;&lt;div&gt;(ModalidadAsistencia)&lt;/div&gt;" vertex="1">
           <mxGeometry height="50" width="245.5" x="270" y="627.73" as="geometry" />
         </mxCell>
-        <mxCell id="gqLIt7stJMQVaCmjSFlq-41" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=default;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;strokeColor=#000000;resizeWidth=1;resizeHeight=1;" value="schema:CityEvent" vertex="1">
+        <mxCell id="gqLIt7stJMQVaCmjSFlq-41" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=default;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;strokeColor=#000000;resizeWidth=1;resizeHeight=1;" value="edintagenda:CityEvent&#xa;(EventoCiudad)" vertex="1">
           <mxGeometry height="60" width="150" x="570" y="420" as="geometry">
             <mxRectangle height="26" width="90" x="-710" y="-920" as="alternateBounds" />
           </mxGeometry>
